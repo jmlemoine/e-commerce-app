@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "998614862686",
+    "firebase_url": "https://e-commerce-app-df1cd.firebaseio.com",
+    "project_id": "e-commerce-app-df1cd",
+    "storage_bucket": "e-commerce-app-df1cd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:998614862686:android:0c002965064a58209b5dcf",
+        "android_client_info": {
+          "package_name": "pucmm.temas.especiales.e_commerce_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "998614862686-1a2kvtqofjgfuuih5u8gjss3ih8dl795.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDI8cgfojV8G0SNSiCOj5IJc-nBVisA11A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "998614862686-1a2kvtqofjgfuuih5u8gjss3ih8dl795.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
