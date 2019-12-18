@@ -109,9 +109,9 @@ public class ProfileFragment extends Fragment {
         isProvider.setChecked(user.isIsProvider());
 
 
-        FirebaseNetwork.obtain().download(user.getPhoto(),
+        /*FirebaseNetwork.obtain().download(user.getPhoto(),
                 (Response.Listener<Bitmap>) response -> profile.setImageBitmap(response),
-                error -> Log.e(TAG, error.getMessage()));
+                error -> Log.e(TAG, error.getMessage()));*/
 
         save.setOnClickListener(v -> {
             if (FieldValidator.isEmpty(getContext(), name, contact)) {
@@ -163,7 +163,7 @@ public class ProfileFragment extends Fragment {
             profileDefault = true;
         }, error -> {
             progressDialog.dismiss();
-            Toast.makeText(getContext(), error.getMessage(), Toast.LENGTH_SHORT).show();
+            Toast.makeText(getContext(), "Is provider", Toast.LENGTH_SHORT).show();
         });
         request.execute();
     }

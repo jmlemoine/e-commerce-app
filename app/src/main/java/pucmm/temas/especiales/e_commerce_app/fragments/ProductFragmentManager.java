@@ -152,7 +152,7 @@ public class ProductFragmentManager extends Fragment {
             price.setText(String.valueOf(element.getPrice()));
             active.setChecked(element.isActive());
 
-            FirebaseNetwork.obtain().download(element.getPhoto(), (Response.Listener<Bitmap>) response -> profile.setImageBitmap(response), error -> Log.e(TAG, error.getMessage()));
+            //FirebaseNetwork.obtain().download(element.getPhoto(), (Response.Listener<Bitmap>) response -> profile.setImageBitmap(response), error -> Log.e(TAG, error.getMessage()));
         }
 
         save.setOnClickListener(v -> {

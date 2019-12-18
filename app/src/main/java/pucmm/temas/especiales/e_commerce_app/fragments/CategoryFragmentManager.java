@@ -111,7 +111,7 @@ public class CategoryFragmentManager extends Fragment {
         if (element != null) {
             name.setText(element.getName());
             active.setChecked(element.isActive());
-            FirebaseNetwork.obtain().download(element.getPhoto(), (Response.Listener<Bitmap>) response -> profile.setImageBitmap(response), error -> Log.e(TAG, error.getMessage()));
+            //FirebaseNetwork.obtain().download(element.getPhoto(), (Response.Listener<Bitmap>) response -> profile.setImageBitmap(response), error -> Log.e(TAG, error.getMessage()));
         }
 
         save.setOnClickListener(v -> {

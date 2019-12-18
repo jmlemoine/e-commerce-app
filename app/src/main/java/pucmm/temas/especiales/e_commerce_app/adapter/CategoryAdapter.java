@@ -94,7 +94,7 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.MyView
         holder.name.setText(element.getName());
 
         if (element.getPhoto() != null && !element.getPhoto().isEmpty()) {
-            FirebaseNetwork.obtain().download(element.getPhoto(), (Response.Listener<Bitmap>) response -> holder.avatar.setImageBitmap(response), error -> Log.e(TAG, error.getMessage()));
+            //FirebaseNetwork.obtain().download(element.getPhoto(), (Response.Listener<Bitmap>) response -> holder.avatar.setImageBitmap(response), error -> Log.e(TAG, error.getMessage()));
         }
     }
 

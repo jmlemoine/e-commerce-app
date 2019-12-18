@@ -17,7 +17,7 @@ import pucmm.temas.especiales.e_commerce_app.asynctasks.Response;
 public class FirebaseNetwork {
     private static final String TAG = "FirebaseStorageUtils";
 
-    private static final String URL_DOWNLOAD = "gs://ecommerceapp-fc0d8.appspot.com/images/e_commerce/";
+    private static final String URL_DOWNLOAD = "gs://e-commerce-app-df1cd.appspot.com/images/e_commerce/";
     private static final String PATH_UPLOAD = "images/e_commerce/";
     private static final long ONE_MEGABYTE = 1024 * 1024;
 

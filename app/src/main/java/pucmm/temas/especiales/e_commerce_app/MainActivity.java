@@ -53,24 +53,6 @@ public class MainActivity extends AppCompatActivity
     }
 
     private void updateUI() {
-//        final FirebaseAuth firebaseAuth = FirebaseAuth.getInstance();
-//        String email = "maximo1225@gmail.com";
-//        String password = "!@#$mastermind12";
-//
-//        firebaseAuth.signInWithEmailAndPassword(email, password)
-//                .addOnSuccessListener(new OnSuccessListener<AuthResult>() {
-//                    @Override
-//                    public void onSuccess(AuthResult authResult) {
-//                        Log.e("SplashActivity", "signInWithEmailAndPassword:success");
-//                        FirebaseUser user = firebaseAuth.getCurrentUser();
-//                    }
-//                })
-//                .addOnFailureListener(new OnFailureListener() {
-//                    @Override
-//                    public void onFailure(@NonNull Exception e) {
-//                        Log.e("SplashActivity", "signInWithEmailAndPassword:failure");
-//                    }
-//                });
 
         FragmentNavigationManager.newInstance(this);
         this.mDrawerLayout = (DrawerLayout) findViewById(R.id.drawerLayout);
@@ -109,9 +91,9 @@ public class MainActivity extends AppCompatActivity
         txtUserInfo.setText(user.getName());
         TextView txtEmail = (TextView) headerView.findViewById(R.id.txtUserEmail);
         txtEmail.setText(user.getEmail());
-        FirebaseNetwork.obtain().download(user.getPhoto(),
+        /*FirebaseNetwork.obtain().download(user.getPhoto(),
                 (Response.Listener<Bitmap>) response -> profile.setImageBitmap(response),
-                error -> Log.e(TAG, error.getMessage()));
+                error -> Log.e(TAG, error.getMessage()));*/
     }
 
     @Override
