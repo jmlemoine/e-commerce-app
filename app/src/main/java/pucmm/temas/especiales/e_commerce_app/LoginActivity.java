@@ -45,8 +45,6 @@ public class LoginActivity extends AppCompatActivity {
         this.user = (EditText) findViewById(R.id.txtUser);
         this.password = (EditText) findViewById(R.id.txtPassword);
         this.login = (Button) findViewById(R.id.btnLogin);
-        this.signup = (TextView) findViewById(R.id.viewSignup);
-        this.forgotPassword = (TextView) findViewById(R.id.viewForgot);
         this.progressBar = (ProgressBar) findViewById(R.id.progress_bar_login);
 
         session = new UserSession(getApplicationContext());
@@ -54,11 +52,24 @@ public class LoginActivity extends AppCompatActivity {
         //access event for login authentication
         this.login.setOnClickListener(view -> auth());
 
-        //Access event for signup
-        this.signup.setOnClickListener(view -> showSignup());
+    }
 
-        //Access event for Forgot password
-        this.forgotPassword.setOnClickListener(view -> showForgotPassword());
+    public void onClickSignUp(View v){
+        signUp();
+    }
+
+    public void onClickForgotPassword(View v){
+        forgotPassword();
+    }
+
+    public void signUp(){
+        Intent intent = new Intent(LoginActivity.this, SignUpActivity.class);
+        startActivity(intent);
+    }
+
+    public void forgotPassword(){
+        Intent intent = new Intent(LoginActivity.this, ForgotPasswordActivity.class);
+        startActivity(intent);
     }
 
     private void auth(){
@@ -129,13 +140,5 @@ public class LoginActivity extends AppCompatActivity {
         this.login.setVisibility(View.VISIBLE);
     }
 
-    private void showSignup(){
-        Intent intent = new Intent(LoginActivity.this, SignUpActivity.class);
-        startActivity(intent);
-    }
 
-    private void showForgotPassword(){
-        Intent intent = new Intent(LoginActivity.this, ForgotPasswordActivity.class);
-        startActivity(intent);
-    }
 }

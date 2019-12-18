@@ -42,7 +42,6 @@ public class ForgotPasswordActivity extends AppCompatActivity {
     private void updateUI() {
         this.email = (EditText) findViewById(R.id.txtForgotPassword);
         this.send = (Button) findViewById(R.id.btnSend);
-        this.back = (TextView) findViewById(R.id.btnBack);
         this.progressBar = (ProgressBar) findViewById(R.id.progress_bar);
 
         //Send request to get the password
@@ -53,13 +52,12 @@ public class ForgotPasswordActivity extends AppCompatActivity {
             }
         });
 
-        //Go back to login
-        this.back.setOnClickListener((new View.OnClickListener(){
-            @Override
-            public void onClick(View view){
-                goBack();
-            }
-        }));
+
+    }
+
+    public void onClickLogin(View v){
+        goBack();
+
     }
 
     private void sendForgotEmail(){

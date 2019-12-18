@@ -56,29 +56,29 @@ public class SignUpActivity extends AppCompatActivity  {
         this.contact = (EditText) findViewById(R.id.txtContact);
         //Setting format to contact field
         this.contact.addTextChangedListener(new PhoneNumberFormattingTextWatcher());
-        this.forgotPassword = (TextView) findViewById(R.id.viewForgot);
-        this.login = (TextView) findViewById(R.id.viewLogin);
         this.signup = (Button) findViewById(R.id.btnSignup);
         this.progressBar = (ProgressBar) findViewById(R.id.progress_bar_signup);
 
-
-        //Access event for Forgot password
-        this.forgotPassword.setOnClickListener(view -> showForgotPassword());
-
-        this.login.setOnClickListener(view -> showLogin());
 
         //When the signup button is clicked
         this.signup.setOnClickListener(view -> registrate());
     }
 
+    public void onClickFP(View v){
+        ForgotPassword();
+    }
 
-    private void showForgotPassword(){
-        Intent intent = new Intent(SignUpActivity.this, ForgotPasswordActivity.class);
+    public void onClickL(View v){
+        Login();
+    }
+
+    public void Login(){
+        Intent intent = new Intent(SignUpActivity.this, LoginActivity.class);
         startActivity(intent);
     }
 
-    private void showLogin(){
-        Intent intent = new Intent(SignUpActivity.this, LoginActivity.class);
+    public void ForgotPassword(){
+        Intent intent = new Intent(SignUpActivity.this, ForgotPasswordActivity.class);
         startActivity(intent);
     }
 
